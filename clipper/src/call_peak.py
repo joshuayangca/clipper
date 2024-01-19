@@ -925,10 +925,11 @@ def call_peaks(interval, gene_length, bam_file=None, max_gap=25,
 
     bam_fileobj = pysam.Samfile(bam_file, 'rb')
 
-    # fixes non-standard chrom file names (without the chr)
-    if not interval.chrom.startswith("chr") and not interval.chrom.startswith("ERCC") and not interval.chrom.startswith(
-            "phiX"):
-        interval.chrom = "chr" + interval.chrom
+    #The following lines were causing issues for labelling the HIV_rtTA_GagzipGFP custome assembly (test to fix it Jan19 2024)
+      # fixes non-standard chrom file names (without the chr)
+      #if not interval.chrom.startswith("chr") and not interval.chrom.startswith("ERCC") and not interval.chrom.startswith(
+      #        "phiX"):
+      #    interval.chrom = "chr" + interval.chrom
 
     # fetch reads in the genomic region
     try:
