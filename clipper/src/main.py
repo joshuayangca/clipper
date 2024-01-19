@@ -153,7 +153,7 @@ def option_parser():
     :return: OptionParser object
     '''
     usage = """
-        THIS IS CLIPPER FOR ECLIP VERSION 2.1.2
+        THIS IS CLIPPER FOR ECLIP VERSION 2.1.2 with HIV genome Jan18 2000
         clipper -b YOUR_BAM_FILE.bam -o YOUR_OUT_FILE.bed -s hg19 """
     description = """CLIPper. Michael Lovci, Gabriel Pratt 2012, Hsuan-lin Her 2020.
                          CLIP peakfinder that uses fitted smoothing splines to 
